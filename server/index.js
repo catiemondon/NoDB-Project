@@ -22,5 +22,8 @@ app.get('/api/cardio/:id', cardio_ctrl.getCardioById)
 
 app.post('/api/addCardio', cardio_ctrl.addCardio)
 
+
+//Port we are running on
+
 const port= 3333;
 app.listen(port, ()=> console.log(`ten points to ${port}`))

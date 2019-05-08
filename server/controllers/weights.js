@@ -1,3 +1,5 @@
+//Weights data and CRUD functions
+
 let weights= [
     {name: "Curls", id: 1},
     {name: "Squats", id: 2},
