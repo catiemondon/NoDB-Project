@@ -30,7 +30,9 @@ class AddWeight extends Component{
                 {weights}
               <form onSubmit={this.handleAddWeight}>
               <input placeholder="Add new weight" name="weightName"></input>
-                <buton></buton>
+
+              //YOU LEFT OFF HERE. USE ADDEVENT.JS to set up your button and you need to handle the Input and add weight
+                <button></button>
 
               </form>
                 
