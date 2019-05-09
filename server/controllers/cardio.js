@@ -25,7 +25,32 @@ module.exports={
             id: id
         }
         cardios=[...cardios, newCardio]
-        res.status(200).send(newCardio)
+        res.status(200).send(cardios)
+    },
+
+    editCardio: (req, res)=>{
+        
+        let {name}= req.body
+        let {id}= req.params
+        
+        for(var i=0; i<cardios.length; i++){
+            if(cardios[i].id === +id){
+                cardios[i].name= name
+            }
+        }
+       
+        res.status(200).send(cardios)
+    },
+
+    deleteCardio: (req, res)=>{
+        
+        let {id}= req.params
+        for(let i=0; i<cardios.length; i++){
+            if(cardios[i].id === +id){
+                cardios.splice([i],1)
+            }
+        }
+        res.status(200).send(cardios)
     }
 
 

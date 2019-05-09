@@ -25,8 +25,30 @@ module.exports={
             id: id
         }
         weights=[...weights, newWeight]
-        res.status(200).send(newWeight)
+        res.status(200).send(weights)
     },
 
+    editWeight:(req, res)=>{
+        
+        let {name}= req.body
+        let {id}= req.params
+        
+        for(var i=0; i<weights.length; i++){
+            if(weights[i].id=== +id){
+                weights[i].name = name
+            }
+        }
+        res.status(200).send(weights)
+    },
+
+    deleteCardio: (req, res)=>{
+        let {id}= req.params
+        for(let i=0; i<weights.length; i++){
+            if(weights[i].id === +id){
+                weights.splice([i],1)
+            }
+        }
+        res.status(200).send(weights)
+    }
     
 }

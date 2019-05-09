@@ -2,6 +2,7 @@
   "name": "nodb-proj",
   "version": "0.1.0",
   "private": true,
+  "main": "server/index.js",
   "dependencies": {
     "axios": "^0.18.0",
     "express": "^4.16.4",
