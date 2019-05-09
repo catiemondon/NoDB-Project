@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import './Weights.css'
 
 class WeightExercise extends Component{
     constructor(){

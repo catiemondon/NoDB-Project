@@ -2,7 +2,8 @@
 
 let cardios=[
     {name: "Stairmaster", id: 1},
-    {name: "Treadmill", id: 2}
+    {name: "Treadmill", id: 2},
+    {name: "Hiking", id:3}
 ]
 
 module.exports={

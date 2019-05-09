@@ -45,7 +45,7 @@ class AddCardio extends Component{
             this.setState({
                 cardios: res.data
             })
-        })
+        }).catch(console.log('error'))
     }
 
     //write delete functionality here
@@ -55,7 +55,7 @@ class AddCardio extends Component{
             this.setState({
                 cardios: res.data
             })
-        })
+        }).catch(console.log('error'))
     }
 
     render(){
@@ -69,16 +69,22 @@ class AddCardio extends Component{
 
         return(
             <div>
-                <h2>Cardio</h2>
+                <div className="TodayCardio">
+                <CardioOfTheDay exercises={cardios}  />
+            </div>
+            
+                <div className="CardioList">
+                <h2 className="cardio">Cardio</h2>
                 {cardios}
            
-            <form onSubmit={this.handleAddCardio}>
-            <input placeholder="Cardio Exercise" name="cardioName" onChange={this.handleUpdateInput} />
+            <form onSubmit={this.handleAddCardio} className="AddCardioList">
+            <input placeholder="Input Cardio Exercise" name="cardioName" onChange={this.handleUpdateInput} />
             <button>Add Cardio Exercise</button>
             
             </form>
-            <CardioOfTheDay exercises={cardios} />
             </div>
+            </div>
+            
         )
     }
 }

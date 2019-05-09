@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Raleway');
+
+.TodayCardio{
+    margin-bottom:15vh;
+}
+
+.TodayCardio h3{
+    font-family: 'Dancing Script', cursive;
+    font-size: 2em;
+    margin-bottom: 18px;
+    margin-left: 10%;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.TodayCardio li{
+    font-family: 'Raleway', sans-serif;
+    margin-left: 5em;
+    margin-bottom: 1em;
+    font-size: 1.3em;
+    
+    
+}
+
+.TodayCardio button{
+   background-color: #F2f1de;
+   border: none;
+   color:#f2f1de;
+
+}
+
+.TodayCardio{
+    background-color: #F2f1de;
+    display: flex;
+    flex-direction: column;
+    justify-items: space-evenly;
+    border-radius: 6px;
+
+}
+
+.CardioList{
+    background-color: #F2f1de;
+    padding-top: .1px;
+    padding-left: .1px;
+    
+}
+
+.CardioList h2{
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.6em;
+    margin-left: 38%;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 18px;
+
+
+}
+
+.CardioList{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.3em;
+}
+
+.CardioList h4{
+    margin-left: 10px;
+    margin-bottom: 1em;
+    margin-right: 16px;
+}
+
+.CardioList button{
+    border-radius: 16px;
+    margin-left: 15px;
+    background-color: #5bb25f;
+    font-family: 'Raleway', sans-serif;
+    margin-right: 1em;
+    color: white;
+    font-size: 1em;
+}
+.CardioList input{
+    margin-top: 1em;
+    border-radius: 6px;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    font-size: .8em;
+    font-family: 'Raleway', sans-serif;
+}
+
+

@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-
+import  './Cardio.css'
 
 class CardioExercise extends Component{
     constructor(){

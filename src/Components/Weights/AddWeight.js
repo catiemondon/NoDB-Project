@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import WeightExercise from './WeightExercise'
 import WeightOfTheDay from './WeightOfTheDay'
+
 class AddWeight extends Component{
     constructor(){
         super()
@@ -62,16 +63,21 @@ class AddWeight extends Component{
         })
         return(
             <div>
+                <div className="TodayWeights">
+                <WeightOfTheDay exercises={weights}/>
+
+                </div>
+                <div className="WeightsList">
                 <h2>Weights</h2>
                 {weights}
               <form onSubmit={this.handleAddWeight}>
-              <input placeholder="Weight Exercise" name="weightName" onChange={this.handleUpdateInput}></input>
+              <input placeholder="Input Weight Exercise" name="weightName" onChange={this.handleUpdateInput}></input>
 
             
                 <button>Add Weight Exercise</button>
 
               </form>
-                <WeightOfTheDay exercises={weights}/>
+            </div>
             </div>
         )
     }
