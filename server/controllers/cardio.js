@@ -1,9 +1,9 @@
 //Cardio data and CRUD functions
 
 let cardios=[
-    {name: "Stairmaster", id: 1},
-    {name: "Treadmill", id: 2},
-    {name: "Hiking", id:3}
+    {name: "Stairmaster", time: 30, id: 1},
+    {name: "Treadmill", time: 20, id: 2},
+    {name: "Hiking", time: 90, id:3}
 ]
 
 let id= 1;
@@ -24,6 +24,7 @@ module.exports={
         let id= cardios[cardios.length -1].id +1
         const newCardio= {
             name: req.body.name,
+            time: req.body.time,
             id: id
         }
         cardios=[...cardios, newCardio]

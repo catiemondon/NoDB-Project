@@ -8,7 +8,8 @@ class AddWeight extends Component{
         super()
         this.state={
             weights: [],
-            weightName: ''
+            weightName: '',
+            repCount: null
         }
     }
 
@@ -23,14 +24,16 @@ class AddWeight extends Component{
     handleUpdateInput=(e)=>{
         this.setState({
 
-            [e.target.name]: e.target.value
+            [e.target.name]: e.target.value,
+           
         })
     }
 
+
     handleAddWeight=(e)=>{
         e.preventDefault()
-        axios.post('/api/addWeight', {name:this.state.weightName}).then((res)=>{
-            console.log(res)
+        axios.post('/api/addWeight', {name:this.state.weightName, reps: this.state.repCount }).then((res)=>{
+            
             this.setState({
                 weights: res.data
             })
@@ -57,6 +60,7 @@ class AddWeight extends Component{
 
     render(){
         const weights= this.state.weights.map((weight, i)=>{
+        
             return(
                 <WeightExercise key={i} exercise={weight} editWeight={this.handleUpdateWeight} deleteWeight={this.handleDeleteWeight} />
             )
@@ -65,7 +69,7 @@ class AddWeight extends Component{
         const weightsname=this.state.weights.map(
             (weight,i)=>{
                 return(
-                    <WeightOfTheDay exercisename= {weight.name} key={i} />
+                    <WeightOfTheDay exercisename= {weight.name} repcount={weight.reps} key={i} />
                 )
             }
         )
@@ -88,7 +92,8 @@ class AddWeight extends Component{
                 <h2>Weights</h2>
                 {weights}
               <form onSubmit={this.handleAddWeight}>
-              <input placeholder="Input Weight Exercise" name="weightName" onChange={this.handleUpdateInput}></input>
+              <input placeholder="Input Weight Exercise" name="weightName"  onChange={this.handleUpdateInput}></input>
+              <input placeholder="# of Reps" name="repCount" onChange={this.handleUpdateInput}></input>
 
             
                 <button>Add Weight Exercise</button>

@@ -4,7 +4,10 @@ const CardioOfTheDay=(props)=>{
     return(
             
         <div>
+            <h4>
             {props.exercisename}
+            <p> Time: {props.cardiotime} minutes</p>
+            </h4>
         </div>
     )
 }

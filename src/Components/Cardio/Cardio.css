@@ -13,14 +13,11 @@
     font-weight: 600;
 }
 
-.TodayCardio li{
+.TodayCardio h4{
     font-family: 'Raleway', sans-serif;
     margin-left: 5em;
     margin-bottom: 1em;
-    font-size: 1.3em;
-   
-    
-    
+    font-size: 1.3em;    
 }
 
 .TodayCardio button{

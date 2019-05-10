@@ -9,7 +9,8 @@ class AddCardio extends Component{
         super()
         this.state={
             cardios: [],
-            cardioName: ''
+            cardioName: '',
+            cardioTime: null
         }
         
     }
@@ -30,7 +31,7 @@ class AddCardio extends Component{
 
     handleAddCardio=(e)=>{
         e.preventDefault()
-        axios.post('/api/addCardio', {name:this.state.cardioName}).then((res)=>{
+        axios.post('/api/addCardio', {name:this.state.cardioName, time: this.state.cardioTime}).then((res)=>{
             
             this.setState({
                 cardios: res.data
@@ -69,7 +70,7 @@ class AddCardio extends Component{
         })
         const cardiosname=this.state.cardios.map((cardio, i)=>{
             return(
-                <CardioOfTheDay exercisename={cardio.name} key={i}
+                <CardioOfTheDay exercisename={cardio.name} cardiotime={cardio.time}key={i}
                 />
                 
             )
@@ -100,6 +101,7 @@ class AddCardio extends Component{
            
             <form onSubmit={this.handleAddCardio} className="AddCardioList">
             <input placeholder="Input Cardio Exercise" name="cardioName" onChange={this.handleUpdateInput} />
+            <input placeholder ="Cardio time" name="cardioTime" onChange={this.handleUpdateInput} />
             <button>Add Cardio Exercise</button>
             
             </form>

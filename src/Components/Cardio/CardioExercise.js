@@ -37,7 +37,7 @@ class CardioExercise extends Component{
             <div>
                 <li>
                     <h4>
-                    {this.props.exercise.name}
+                    {`${this.props.exercise.name} Time: ${this.props.exercise.time} minutes`}
                     <button onClick={this.handleEdit}>Edit</button>
                     <button onClick={this.handleDelete}>Delete </button>
                 </h4>

@@ -1,9 +1,9 @@
 //Weights data and CRUD functions
 
 let weights= [
-    {name: "Curls",  id: 1},
-    {name: "Squats", id: 2},
-    {name: "Deadlifts", id:3}
+    {name: "Curls", reps:12,  id: 1},
+    {name: "Squats", reps: 10, id: 2},
+    {name: "Deadlifts", reps:8, id:3}
 ]
 let id= 1;
 
@@ -23,10 +23,13 @@ module.exports={
         let id= weights[weights.length-1].id +1
         const newWeight={
             name: req.body.name,
-            id: id
+            reps: req.body.reps,
+            id: id,
+
         }
         weights=[...weights, newWeight]
         res.status(200).send(weights)
+        console.log(newWeight)
     },
 
     editWeight:(req, res)=>{
