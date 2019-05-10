@@ -6,7 +6,7 @@ const WeightOfTheDay=(props)=>{
         <div>
             <h4>
             {props.exercisename}
-            <p> Reps:{props.repcount}</p>
+            <p> Reps: {props.repcount}</p>
             </h4>
         </div>
     )

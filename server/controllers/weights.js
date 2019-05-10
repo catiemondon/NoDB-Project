@@ -34,12 +34,14 @@ module.exports={
 
     editWeight:(req, res)=>{
         
-        let {name}= req.body
+        let {name, reps}= req.body
         let {id}= req.params
+        
         
         for(var i=0; i<weights.length; i++){
             if(weights[i].id=== +id){
                 weights[i].name = name
+                weights[i].reps=reps
             }
         }
         res.status(200).send(weights)

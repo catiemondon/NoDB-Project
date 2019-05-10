@@ -6,6 +6,7 @@ class WeightExercise extends Component{
         super()
         this.state={
             input: '',
+            repInput: '',
             edit: false
         }
     }
@@ -15,11 +16,15 @@ class WeightExercise extends Component{
     }
 
     handleInputChange=(e)=>{
-        this.setState({input: e.target.value})
+        this.setState({
+            [e.target.name]: e.target.value,
+        })
     }
 
+   
+
     handleSave=()=>{
-        this.props.editWeight(this.state.input, this.props.exercise.id)
+        this.props.editWeight(this.state.input, this.state.repInput,this.props.exercise.id)
         this.setState({
             edit: !this.state.edit
         })
@@ -46,7 +51,7 @@ class WeightExercise extends Component{
                     {
                         this.state.edit ?
                         <div>
-                            <input type="text" onChange={this.handleInputChange}/>
+                            <input type="text" placeholder="Weight Exercise" name="input" onChange={this.handleInputChange}/> <input type="text" name="repInput" onChange={this.handleInputChange}></input>
                             <button onClick={this.handleSave}>Save</button>
                         </div>
                         :

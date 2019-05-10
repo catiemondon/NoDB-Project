@@ -39,6 +39,7 @@ module.exports={
         for(var i=0; i<cardios.length; i++){
             if(cardios[i].id === +id){
                 cardios[i].name= name
+                cardios[i].time= time
             }
         }
        

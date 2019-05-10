@@ -40,8 +40,8 @@ class AddWeight extends Component{
         })
     }
 
-    handleUpdateWeight=(input, id)=>{
-        axios.put(`/api/editWeight/${id}`, {name:input})
+    handleUpdateWeight=(input, repInput, id)=>{
+        axios.put(`/api/editWeight/${id}`, {name:input, reps: repInput})
         .then(res =>{
             this.setState({
                 weights: res.data
