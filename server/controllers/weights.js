@@ -1,10 +1,11 @@
 //Weights data and CRUD functions
 
 let weights= [
-    {name: "Curls", id: 1},
+    {name: "Curls",  id: 1},
     {name: "Squats", id: 2},
     {name: "Deadlifts", id:3}
 ]
+let id= 1;
 
 module.exports={
     getAllWeights: (req, res)=>{

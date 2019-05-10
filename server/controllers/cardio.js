@@ -6,6 +6,7 @@ let cardios=[
     {name: "Hiking", id:3}
 ]
 
+let id= 1;
 module.exports={
 
     getAllCardio: (req, res)=>{

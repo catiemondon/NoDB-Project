@@ -11,6 +11,7 @@ class AddCardio extends Component{
             cardios: [],
             cardioName: ''
         }
+        
     }
 
     componentDidMount=()=>{
@@ -61,17 +62,37 @@ class AddCardio extends Component{
     render(){
         const cardios=this.state.cardios.map((cardio, i)=>{
             return(
-               <CardioExercise key={i} exercise={cardio} editCardio={this.handleUpdateCardio} deleteCardio={this.handleDeleteCardio}
-                />
+                <CardioExercise key={i} exercise={cardio} editCardio={this.handleUpdateCardio} deleteCardio={this.handleDeleteCardio} />
+              
                 //Add prop key for delete function
             )
         })
+        const cardiosname=this.state.cardios.map((cardio, i)=>{
+            return(
+                <CardioOfTheDay exercisename={cardio.name} key={i}
+                />
+                
+            )
+        })
+        
 
         return(
+            
+
             <div>
+                
                 <div className="TodayCardio">
-                <CardioOfTheDay exercises={cardios}  />
+                <h3>Today's Cardio:</h3>
+                <li>
+                <div>
+                
+                {cardiosname}
+                
+                </div>
+                </li>
+                
             </div>
+            
             
                 <div className="CardioList">
                 <h2 className="cardio">Cardio</h2>

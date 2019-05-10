@@ -61,12 +61,29 @@ class AddWeight extends Component{
                 <WeightExercise key={i} exercise={weight} editWeight={this.handleUpdateWeight} deleteWeight={this.handleDeleteWeight} />
             )
         })
+
+        const weightsname=this.state.weights.map(
+            (weight,i)=>{
+                return(
+                    <WeightOfTheDay exercisename= {weight.name} key={i} />
+                )
+            }
+        )
+
         return(
             <div>
                 <div className="TodayWeights">
-                <WeightOfTheDay exercises={weights}/>
+                <h3>Today's Weights</h3>
+                <li>
+                <div>
+
+                {weightsname}
 
                 </div>
+                </li>
+                </div>
+
+
                 <div className="WeightsList">
                 <h2>Weights</h2>
                 {weights}

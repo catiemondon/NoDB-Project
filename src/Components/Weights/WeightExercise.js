@@ -38,6 +38,8 @@ class WeightExercise extends Component{
 
                 <h4>
                     {this.props.exercise.name}
+                    
+                    {this.props.exercise.reps}
                     <button onClick={this.handleEdit}>Edit</button>
                     <button onClick={this.handleDelete}>Delete</button>
                 </h4>
