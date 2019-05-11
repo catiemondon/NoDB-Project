@@ -39,9 +39,9 @@ class AddCardio extends Component{
         })
     }
 
-    handleUpdateCardio=(input, id)=>{
+    handleUpdateCardio=(input, timeInput, id)=>{
         
-        axios.put(`/api/editCardio/${id}`, {name: input})
+        axios.put(`/api/editCardio/${id}`, {name: input, time: timeInput})
         .then(res =>{
            
             this.setState({
@@ -54,13 +54,17 @@ class AddCardio extends Component{
 
     handleDeleteCardio=(id)=>{
         axios.delete(`/api/deleteCardio/${id}`).then(res=>{
+            
             this.setState({
+                
                 cardios: res.data
             })
+        
         }).catch(console.log('error'))
     }
 
     render(){
+        
         const cardios=this.state.cardios.map((cardio, i)=>{
             return(
                 <CardioExercise key={i} exercise={cardio} editCardio={this.handleUpdateCardio} deleteCardio={this.handleDeleteCardio} />

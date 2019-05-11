@@ -29,6 +29,7 @@ class WeightExercise extends Component{
             edit: !this.state.edit
         })
     }
+    
 
     handleDelete=()=>{
         this.props.deleteWeight(this.props.exercise.id)

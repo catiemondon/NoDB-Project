@@ -21,6 +21,16 @@ module.exports={
     },
 
     addCardio: (req, res)=>{
+        if (cardios.length === 0){
+            let id=1
+            const newCardio={
+                name: req.body.name,
+                time: req.body.time, 
+                id: id
+            }
+            cardios=[newCardio]
+        }
+        else{
         let id= cardios[cardios.length -1].id +1
         const newCardio= {
             name: req.body.name,
@@ -28,12 +38,13 @@ module.exports={
             id: id
         }
         cardios=[...cardios, newCardio]
+    }
         res.status(200).send(cardios)
     },
 
     editCardio: (req, res)=>{
         
-        let {name}= req.body
+        let {name, time}= req.body
         let {id}= req.params
         
         for(var i=0; i<cardios.length; i++){
@@ -54,6 +65,7 @@ module.exports={
                 cardios.splice([i],1)
             }
         }
+        
         res.status(200).send(cardios)
     }
 

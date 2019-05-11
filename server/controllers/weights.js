@@ -20,6 +20,17 @@ module.exports={
     },
 
     addWeight:(req, res)=>{
+        if (weights.length=== 0){
+            let id=1
+            const newWeight={
+                name:req.body.name,
+                reps: req.body.reps,
+                id: id
+            }
+            weights=[newWeight]
+
+        }
+        else{
         let id= weights[weights.length-1].id +1
         const newWeight={
             name: req.body.name,
@@ -28,6 +39,7 @@ module.exports={
 
         }
         weights=[...weights, newWeight]
+    }
         res.status(200).send(weights)
         console.log(newWeight)
     },

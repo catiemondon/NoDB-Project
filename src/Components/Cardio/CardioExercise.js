@@ -6,6 +6,7 @@ class CardioExercise extends Component{
         super()
         this.state={
             input: '',
+            timeInput: '',
             edit: false
         }
     }
@@ -15,11 +16,13 @@ class CardioExercise extends Component{
     }
 
     handleInputChange=(e)=>{
-        this.setState({input: e.target.value})
+        this.setState({
+            [e.target.name]: e.target.value,
+        })
     }
 
     handleSave=()=>{
-        this.props.editCardio(this.state.input, this.props.exercise.id)
+        this.props.editCardio(this.state.input, this.state.timeInput, this.props.exercise.id)
         this.setState({
             edit: !this.state.edit
         })
@@ -38,13 +41,16 @@ class CardioExercise extends Component{
                 <li>
                     <h4>
                     {`${this.props.exercise.name} Time: ${this.props.exercise.time} minutes`}
+
+
                     <button onClick={this.handleEdit}>Edit</button>
                     <button onClick={this.handleDelete}>Delete </button>
                 </h4>
                     {
                         this.state.edit ?
                         <div>
-                            <input type="text" onChange={this.handleInputChange}/>
+                            <input type="text" placeholder="Cardio Exercise" name="input" onChange={this.handleInputChange}/>
+                            <input type="text" placeholder="Cardio time" name="timeInput" onChange={this.handleInputChange}></input>
                             <button onClick={this.handleSave}>Save</button>
                         </div>
                         :
