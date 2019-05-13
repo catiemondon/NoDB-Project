@@ -77,7 +77,7 @@ class AddWeight extends Component{
         return(
             <div>
                 <div className="TodayWeights">
-                <h3>Today's Weights</h3>
+                <h3>Today's Weights:</h3>
                 <li>
                 <div>
 

@@ -112,7 +112,7 @@ class AddCardio extends Component{
            
             <form onSubmit={this.handleAddCardio} className="AddCardioList">
             <input id="cardioInput" placeholder="Input Cardio Exercise" name="cardioName" onChange={this.handleUpdateInput} />
-            <input id="cardioInputTime" placeholder ="Cardio time" name="cardioTime" type="reset"  onChange={this.handleUpdateInput} />
+            <input id="cardioInputTime" placeholder ="Cardio time" name="cardioTime"   onChange={this.handleUpdateInput} />
             <button>Add Cardio Exercise</button>
             
             </form>
