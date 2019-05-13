@@ -52,7 +52,7 @@ class WeightExercise extends Component{
                     {
                         this.state.edit ?
                         <div>
-                            <input type="text" placeholder="Weight Exercise" name="input" onChange={this.handleInputChange}/> <input type="text" name="repInput" onChange={this.handleInputChange}></input>
+                            <input type="text" placeholder="Weight Exercise" name="input" onChange={this.handleInputChange}/> <input type="text" name="repInput" placeholder="# of Reps" onChange={this.handleInputChange}></input>
                             <button onClick={this.handleSave}>Save</button>
                         </div>
                         :

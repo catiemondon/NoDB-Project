@@ -18,17 +18,16 @@
     margin-left: 5em;
     margin-bottom: 1em;
     font-size: 1.3em;
+    font-weight: 600;
     
     
 }
 
-.TodayWeights button{
-   background-color: #F2f1de;
-   border: none;
-   color:#f2f1de;
-   outline: none;
-
+.TodayWeights p{
+    font-weight: 200;
 }
+
+
 
 .TodayWeights{
     background-color: #F2f1de;
@@ -48,7 +47,7 @@
 
 .WeightsList h2{
     font-family: 'Dancing Script', cursive;
-    font-size: 1.6em;
+    font-size: 1.8em;
     margin-left: 38%;
     font-weight: 600;
     margin-top: 15px;
@@ -59,7 +58,7 @@
 
 .WeightsList{
     font-family: 'Raleway', sans-serif;
-    font-size: 1.3em;
+    font-size: 1.1em;
 }
 
 .WeightsList h4{

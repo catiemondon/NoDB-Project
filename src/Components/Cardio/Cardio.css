@@ -17,17 +17,14 @@
     font-family: 'Raleway', sans-serif;
     margin-left: 5em;
     margin-bottom: 1em;
-    font-size: 1.3em;    
+    font-size: 1.3em; 
+    font-weight: 600;   
 }
 
-.TodayCardio button{
-   background-color: #F2f1de;
-   border: none;
-   
-   outline: none;
-  
-   
+.TodayCardio p{
+    font-weight: 200;
 }
+
 
 .TodayCardio{
     background-color: #F2f1de;
@@ -49,7 +46,7 @@
 
 .CardioList h2{
     font-family: 'Dancing Script', cursive;
-    font-size: 1.6em;
+    font-size: 1.8em;
     margin-left: 38%;
     font-weight: 600;
     margin-top: 15px;
@@ -60,7 +57,7 @@
 
 .CardioList{
     font-family: 'Raleway', sans-serif;
-    font-size: 1.3em;
+    font-size: 1.1em;
 }
 
 .CardioList h4{

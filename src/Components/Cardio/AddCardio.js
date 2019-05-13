@@ -63,6 +63,13 @@ class AddCardio extends Component{
         }).catch(console.log('error'))
     }
 
+    // handleClearInput=()=>{
+    //    this.setState({
+    //     cardioName: '',
+    //     cardioTime: null
+    //    })
+    // }
+
     render(){
         
         const cardios=this.state.cardios.map((cardio, i)=>{
@@ -104,8 +111,8 @@ class AddCardio extends Component{
                 {cardios}
            
             <form onSubmit={this.handleAddCardio} className="AddCardioList">
-            <input placeholder="Input Cardio Exercise" name="cardioName" onChange={this.handleUpdateInput} />
-            <input placeholder ="Cardio time" name="cardioTime" onChange={this.handleUpdateInput} />
+            <input id="cardioInput" placeholder="Input Cardio Exercise" name="cardioName" onChange={this.handleUpdateInput} />
+            <input id="cardioInputTime" placeholder ="Cardio time" name="cardioTime" type="reset"  onChange={this.handleUpdateInput} />
             <button>Add Cardio Exercise</button>
             
             </form>
